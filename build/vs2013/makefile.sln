@@ -19,6 +19,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sub_string_finder_extended"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sub_string_finder_pretty", "..\..\examples\GettingStarted\sub_string_finder\msvs\sub_string_finder_pretty.vcxproj", "{3AA40693-F93D-4D4B-B32E-068F511A2524}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{8739C1F2-E7C0-473B-BC13-4C7789689D43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "getting_started", "getting_started", "{235D3B61-42F6-4BB8-B17F-A269EA75AECD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -130,6 +134,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3AA40693-F93D-4D4B-B32E-068F511A2525} = {235D3B61-42F6-4BB8-B17F-A269EA75AECD}
+		{3AA40693-F93D-4D4B-B32E-068F511A2526} = {235D3B61-42F6-4BB8-B17F-A269EA75AECD}
+		{3AA40693-F93D-4D4B-B32E-068F511A2524} = {235D3B61-42F6-4BB8-B17F-A269EA75AECD}
+		{235D3B61-42F6-4BB8-B17F-A269EA75AECD} = {8739C1F2-E7C0-473B-BC13-4C7789689D43}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90610C31-381E-4A07-B7CF-B69C1B45417D}
