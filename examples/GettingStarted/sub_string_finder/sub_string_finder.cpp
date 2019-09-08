@@ -49,7 +49,7 @@ public:
         }
     }
 
-    SubStringFinder( const std::string &s, std::vector<std::size_t> &m, std::vector<std::size_t> &p ) :
+    SubStringFinder( const std::string &s, std::vector<std::size_t> &m, std::vector<std::size_t> &p ) noexcept :
         str(s), max_array(m), pos_array(p) { }
 };
 
