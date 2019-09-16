@@ -11,38 +11,32 @@ struct Average {
 	std::vector<float>& m_vInput;
 	std::vector<float>& m_vOutput;
 	void operator() (const blocked_range<int>& range) const {
-		for (int i = range.begin(); i != range.end(); ++i)
-			m_vOutput[i] = (m_vInput[i - 1] + m_vInput[i] + m_vInput[i + 1]) * (1 / 3.0f);
+		for (int i = range.begin(); i != range.end(); ++i) {
+			m_vOutput[i] = m_vInput[i];
+			if (i > range.begin())
+				m_vOutput[i] += m_vInput[i - 1]; 
+			if (i < range.end() - 1)
+				m_vOutput[i] += m_vInput[i + 1];
+			m_vOutput[i] /= (1.0f + (float)(i > range.begin()) + (float)(i < range.end() - 1));
+		}
 	}
 	Average(std::vector<float>& vInput, std::vector<float>& vOutput) : m_vInput(vInput), m_vOutput(vOutput) {}
 };
 
 // Note: the input must be padded such that input[n-1] and input[n] can be used
 // to calculate the first and last output values
-void ParallelAverage(std::vector<float>& vOutput, std::vector<float>& vInput, size_t n) {
+void ParallelAverage(std::vector<float>& vInput, std::vector<float>& vOutput, const size_t n) {
 	Average avg(vInput, vOutput);
 	parallel_for(blocked_range<int>(0, n, 1000), avg);
 }
 
 int main() {
-	/*std::string str[N] = { std::string("a"), std::string("b") };
-	for (std::size_t i = 2; i < N; ++i)
-		str[i] = str[i - 1] + str[i - 2];
-	std::string& to_scan = str[N - 1];
-	const std::size_t num_elem = to_scan.size();
+	const size_t n = 100;
+	std::vector<float> vInput(n, 0.0f), vOutput(n, 0.0f);
+	for (int i = 0; i < n; ++i)
+		vInput[i] = i * i;
 
-	std::vector<std::size_t> max(num_elem);
-	std::vector<std::size_t> pos(num_elem);
-
-	tbb::parallel_for(tbb::blocked_range<std::size_t>(0, num_elem),
-		SubStringFinder(to_scan, max, pos));
-
-	for (std::size_t i = 0; i < num_elem; ++i)
-		std::cout << " " << max[i] << "(" << pos[i] << ")" << std::endl;
-     */
-
-
-
+	ParallelAverage(vInput, vOutput, n);
 
 	return 0;
 }

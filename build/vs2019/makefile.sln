@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tree_sum", "..\..\examples\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_average", "..\..\examples\GettingStarted\parallel_for\msvs\parallel_average.vcxproj", "{BCF554FF-2D6B-406D-ABAD-F39F02F0E7DF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "parallel_merge_range", "..\..\examples\GettingStarted\parallel_for\msvs\parallel_merge_range.vcxproj", "{A6F58182-FF98-43C1-9602-6CCF3672EC6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -169,6 +171,22 @@ Global
 		{BCF554FF-2D6B-406D-ABAD-F39F02F0E7DF}.Release-MT|Win32.Build.0 = Release|Win32
 		{BCF554FF-2D6B-406D-ABAD-F39F02F0E7DF}.Release-MT|x64.ActiveCfg = Release|x64
 		{BCF554FF-2D6B-406D-ABAD-F39F02F0E7DF}.Release-MT|x64.Build.0 = Release|x64
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Debug|Win32.Build.0 = Debug|Win32
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Debug|x64.ActiveCfg = Debug|x64
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Debug|x64.Build.0 = Debug|x64
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Debug-MT|Win32.ActiveCfg = Debug|Win32
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Debug-MT|Win32.Build.0 = Debug|Win32
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Debug-MT|x64.ActiveCfg = Debug|x64
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Debug-MT|x64.Build.0 = Debug|x64
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Release|Win32.ActiveCfg = Release|Win32
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Release|Win32.Build.0 = Release|Win32
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Release|x64.ActiveCfg = Release|x64
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Release|x64.Build.0 = Release|x64
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Release-MT|Win32.ActiveCfg = Release|Win32
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Release-MT|Win32.Build.0 = Release|Win32
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Release-MT|x64.ActiveCfg = Release|x64
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F}.Release-MT|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,6 +199,7 @@ Global
 		{CE0EE73A-C988-43AE-930E-5D3A55D805C6} = {8739C1F2-E7C0-473B-BC13-4C7789689D43}
 		{C931C7A2-074E-4150-9E7A-39A03250411E} = {CE0EE73A-C988-43AE-930E-5D3A55D805C6}
 		{BCF554FF-2D6B-406D-ABAD-F39F02F0E7DF} = {235D3B61-42F6-4BB8-B17F-A269EA75AECD}
+		{A6F58182-FF98-43C1-9602-6CCF3672EC6F} = {235D3B61-42F6-4BB8-B17F-A269EA75AECD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90610C31-381E-4A07-B7CF-B69C1B45417D}
