@@ -37,6 +37,8 @@ int main() {
 		vInput[i] = i * i;
 
 	ParallelAverage(vInput, vOutput, n);
+	for (int j = 0; j < n; ++j)
+		std::cout << "vOutput[" << j << "]=" << vOutput[j] << "\n";
 
 	return 0;
 }
